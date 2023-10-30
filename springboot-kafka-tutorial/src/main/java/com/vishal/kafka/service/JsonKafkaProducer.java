@@ -20,7 +20,7 @@ public class JsonKafkaProducer {
 
 
     public void sendMessage(User user){
-        LOGGER.info("User JSON Message sent :: {}",user);
+        LOGGER.info("User JSON Message being sent :: {}",user);
 
         Message<User> message = MessageBuilder
                 .withPayload(user)
