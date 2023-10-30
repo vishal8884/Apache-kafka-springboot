@@ -17,7 +17,7 @@ public class KafkaProducer {
     private KafkaTemplate<String,String> kafkaTemplate;  //instead of @Autowired constructor injection is done
 
 
-
+    //temp
     public void sendMessage(String message) {
         LOGGER.info("message being sent"+message);
         kafkaTemplate.send("vishal1", message);
