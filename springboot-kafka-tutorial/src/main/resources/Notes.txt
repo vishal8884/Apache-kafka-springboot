@@ -1,0 +1,45 @@
+Links
+
+https://stream.wikimedia.org/v2/stream/recentchange
+
+#########################################################################################################
+
+Kafka Commands
+
+zookeeper-server-start C:\kafka\config\zookeeper.properties
+kafka-server-start C:\kafka\config\server.properties
+kafka-topics --list --bootstrap-server localhost:9092
+kafka-topics --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic first-topic
+kafka-topics --describe --bootstrap-server localhost:9092 --topic first-topic
+kafka-console-consumer --bootstrap-server localhost:9092 --topic first-topic
+kafka-console-producer --broker-list localhost:9092 --topic first-topic
+kafka-topics --delete --bootstrap-server localhost:9092 --topic first-topic
+kafka-console-consumer --bootstrap-server localhost:9092 --topic vishal1 --from-beginning
+
+
+###########################################################################################################
+
+Start zookeeper	 zookeeper-server-start C:\kafka\config\zookeeper.properties
+
+Start kafka	kafka-server-start C:\kafka\config\server.properties
+List topics	kafka-topics --list --bootstrap-server localhost:9092
+
+Create topic	kafka-topics --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic first-topic
+
+Show topic details	kafka-topics --describe --bootstrap-server localhost:9092 --topic first-topic
+
+It will print the content from producrer	kafka-console-consumer --bootstrap-server localhost:9092 --topic first-topic
+
+We can write content to kafka which consume will get	kafka-console-producer --broker-list localhost:9092 --topic first-topic
+
+Delete the topic	kafka-topics --delete --bootstrap-server localhost:9092 --topic first-topic
+Show all messages in kafka consumer	kafka-console-consumer --bootstrap-server localhost:9092 --topic vishal1 --from-beginning
+
+
+
+
+
+
+Tips
+
+Detete contents in C:\tmp when you restart the server (This will clear the logs and cache)
