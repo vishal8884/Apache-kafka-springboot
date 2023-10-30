@@ -18,4 +18,13 @@ public class KafkaTopicConfig {
                 .replicas(1)
                 .build();  //we can use .partitions to specify the number of partitions
     }
+
+    @Bean
+    public NewTopic getJsonNewTopic(){
+        return TopicBuilder
+                .name("jsonTopic")
+                .partitions(10)
+                .replicas(1)
+                .build();  //we can use .partitions to specify the number of partitions
+    }
 }
